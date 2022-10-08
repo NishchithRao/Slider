@@ -1,0 +1,19 @@
+{
+  "name": "@slider/core",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "typings": "dist/index.d.ts",
+  "author": "Nishchith.Rao <nischitrao5@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "src/index.ts",
+  "directories": {
+    "dist": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c"
+  }
+}
