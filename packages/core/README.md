@@ -1,11 +1,11 @@
-# `core`
+# Slider Core Library
 
-> TODO: description
+Core functions and servies for the `Slider` library.
 
-## Usage
+You can use this package to create your own wrapper for your platform.
 
-```
-const core = require('core');
+## Installation
 
-// TODO: DEMONSTRATE API
+```bash
+npm install @slider/core
 ```

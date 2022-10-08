@@ -1,11 +1,28 @@
-# `core`
+# Slider React
 
-> TODO: description
+A React wrapper for the slider library.
+
+## Installation
+
+```bash
+npm install @slider/react
+```
 
 ## Usage
 
-```
-const core = require('core');
+Wrap your elements with the Slider container, provide a transition and you're good to go!.
 
-// TODO: DEMONSTRATE API
+```javascript
+import { SliderContainer } from "@slider/react";
+() => {
+  return (
+    <>
+      <SliderContainer transition="default">
+        <div>Slide1</div>
+        <div>Slide2</div>
+        <div>Slide3</div>
+      </SliderContainer>
+    </>
+  );
+};
 ```
