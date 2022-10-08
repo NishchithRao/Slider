@@ -20,6 +20,6 @@
   ],
   "scripts": {
     "build": "rollup -c",
-    "postbuild": "sass src/index.scss dist/slider-react.css"
+    "postbuild": "sass --no-source-map src/index.scss dist/slider-react.css"
   }
 }
