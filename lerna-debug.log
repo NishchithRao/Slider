@@ -1,0 +1,14 @@
+0 silly argv {
+0 silly argv   _: [ 'create' ],
+0 silly argv   lernaVersion: '5.5.1',
+0 silly argv   '$0': '../../../.npm/_npx/6831/bin/lerna',
+0 silly argv   name: 'core'
+0 silly argv }
+1 notice cli v5.5.1
+2 verbose rootPath /Users/raonishchithniranjan/Desktop/personal/slider
+3 error Error: Command failed with exit code 1: git config --get user.email
+3 error     at makeError (/Users/raonishchithniranjan/.npm/_npx/6831/lib/node_modules/lerna/node_modules/execa/lib/error.js:60:11)
+3 error     at Function.module.exports.sync (/Users/raonishchithniranjan/.npm/_npx/6831/lib/node_modules/lerna/node_modules/execa/index.js:194:17)
+3 error     at Object.execSync (/Users/raonishchithniranjan/.npm/_npx/6831/lib/node_modules/lerna/node_modules/@lerna/child-process/index.js:39:16)
+3 error     at CreateCommand.gitConfig (/Users/raonishchithniranjan/.npm/_npx/6831/lib/node_modules/lerna/node_modules/@lerna/create/index.js:180:25)
+3 error     at CreateCommand.initialize (/Users/raonishchithniranjan/.npm/_npx/6831/lib/node_modules/lerna/node_modules/@lerna/create/index.js:106:47)
