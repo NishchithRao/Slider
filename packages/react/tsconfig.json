@@ -1,6 +1,11 @@
 {
     "extends": "../../tsconfig",
     "compilerOptions": {
-        "jsx": "react-jsx"
-    }
+        "jsx": "react-jsx",
+        "outDir": "dist",
+        "module": "ESNext",
+        "target": "ES5"
+    },
+    "include": ["src"],
+    "exclude": ["node_modules"]
 }
