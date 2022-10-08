@@ -8,10 +8,14 @@ Slider is a JavaScript library for adding sliders to your applications / website
 
 A React wrapper for the slider library.
 
-Use the package manager [npm](https://pip.pypa.io/en/stable/) to install foobar.
-
 ```bash
 npm install @slider/react
+```
+
+import the styles in your project, preferably in the root of your project.
+
+```javascript
+import "@slider/react/slider-react.css";
 ```
 
 ## Usage

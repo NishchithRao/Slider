@@ -8,6 +8,12 @@ A React wrapper for the slider library.
 npm install @slider/react
 ```
 
+import the styles in your project, preferably in the root of your project.
+
+```javascript
+import "@slider/react/slider-react.css";
+```
+
 ## Usage
 
 Wrap your elements with the Slider container, provide a transition and you're good to go!.
