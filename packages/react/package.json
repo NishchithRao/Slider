@@ -1,0 +1,25 @@
+{
+  "name": "@slider/react",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Nishchith.Rao <nischitrao5@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": ">=16"
+  },
+  "dependencies": {
+    "@slider/core": "0.0.0"
+  },
+  "devDependencies": {
+    "@slider/core": "../core"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "node ./__tests__/core.test.js"
+  }
+}
