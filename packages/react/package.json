@@ -5,21 +5,21 @@
   "author": "Nishchith.Rao <nischitrao5@gmail.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "typings": "dist/index.d.ts",
   "peerDependencies": {
     "react": ">=16",
     "react-dom": ">=16"
   },
   "dependencies": {
-    "@slider/core": "0.0.0"
-  },
-  "devDependencies": {
-    "@slider/core": "../core"
+    "@slider/core": "*"
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "test": "node ./__tests__/core.test.js"
+    "build": "rollup -c",
+    "postbuild": "sass src/index.scss dist/slider-react.css"
   }
 }

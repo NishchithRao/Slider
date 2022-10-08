@@ -6,7 +6,8 @@
   "author": "Nishchith.Rao <nischitrao5@gmail.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "src/index.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
   "directories": {
     "dist": "dist"
   },
