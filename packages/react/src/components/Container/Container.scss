@@ -1,0 +1,14 @@
+.Container {
+  height: 100%;
+  max-width: 100%;
+  & > * {
+    display: block;
+    overflow-x: hidden;
+  }
+  overflow-x: hidden;
+  display: grid;
+  grid-auto-columns: calc(100%);
+  grid-auto-flow: column;
+  grid-template-columns: unset;
+  transition: transform ease-in-out;
+}
