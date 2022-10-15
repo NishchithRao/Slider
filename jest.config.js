@@ -8,6 +8,9 @@ module.exports = {
     "!.storybook/**",
   ],
   roots: ["packages"],
+  moduleNameMapper: {
+    "\\.(css|scss)$": "<rootDir>/__mocks__/stylemock.ts",
+  },
   transform: {
     "^.+\\.(ts|tsx)$": "ts-jest",
   },
