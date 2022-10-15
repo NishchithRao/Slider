@@ -3,6 +3,7 @@
     "target": "ESNext",
     "outDir": "dist",
     "jsx": "react-jsx",
+    "strictNullChecks": true,
     "declaration": true,
     "declarationDir": "dist",
     "module": "commonjs",
