@@ -4,11 +4,11 @@ import { SliderService, transitions } from "@slider/core";
 
 export interface ContainerProps {
   children: React.HTMLAttributes<HTMLDivElement>["children"];
-  transition: keyof typeof transitions;
+  transition?: keyof typeof transitions;
 }
 
 const Container: React.FC<ContainerProps> = (props: ContainerProps) => {
-  const { children, transition } = props;
+  const { children, transition = "default" } = props;
   const [containerEl, setContainerEl] = useState<HTMLDivElement>();
 
   const containerRef = useCallback((ref: HTMLDivElement) => {
