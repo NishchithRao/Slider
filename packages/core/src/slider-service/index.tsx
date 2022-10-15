@@ -1,1 +1,1 @@
-export { default as SliderService, TransitonFn } from "./SliderService";
+export { default as SliderService, type TransitonFn } from './SliderService';
