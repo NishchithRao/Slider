@@ -6,20 +6,22 @@
   "homepage": "",
   "license": "ISC",
   "main": "dist/index.cjs",
+  "source": "src/index.ts",
   "module": "dist/index.mjs",
   "typings": "dist/index.d.ts",
   "peerDependencies": {
     "react": ">=16",
-    "react-dom": ">=16"
-  },
-  "dependencies": {
+    "react-dom": ">=16",
     "@slider/core": "*"
+  },
+  "devDependencies": {
+    "@slider/core": "file:../core"
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "rollup -c",
+    "build": "vite build",
     "postbuild": "sass --no-source-map src/index.scss dist/slider-react.css"
   }
 }

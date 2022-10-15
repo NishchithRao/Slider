@@ -6,6 +6,7 @@
   "author": "Nishchith.Rao <nischitrao5@gmail.com>",
   "homepage": "",
   "license": "ISC",
+  "source": "src/index.ts",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "directories": {
@@ -15,6 +16,6 @@
     "dist"
   ],
   "scripts": {
-    "build": "rollup -c"
+    "build": "vite build"
   }
 }
