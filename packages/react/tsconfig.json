@@ -4,6 +4,7 @@
         "jsx": "react-jsx",
         "outDir": "dist",
         "module": "ESNext",
+        "moduleResolution": "node",
         "target": "ES5"
     },
     "include": ["src"],
