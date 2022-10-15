@@ -1,6 +1,6 @@
-import { Children, FC, HTMLAttributes, useCallback, useState } from "react";
-import "./Container.scss";
-import { SliderService, transitions } from "@slider/core";
+import { Children, FC, HTMLAttributes, useCallback, useState } from 'react';
+import './Container.scss';
+import { SliderService, transitions } from '@slider/core';
 
 export interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
   /**
@@ -11,8 +11,8 @@ export interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 const Container: FC<ContainerProps> = (props: ContainerProps) => {
-  const { children, transition = "default", ...rest } = props;
-  const [containerEl, setContainerEl] = useState<HTMLDivElement>();
+  const { children, transition = 'default', ...rest } = props;
+  const [containerEl, setContainerEl] = useState<HTMLDivElement | null>(null);
 
   const containerRef = useCallback((ref: HTMLDivElement) => {
     setContainerEl(ref);
@@ -21,15 +21,14 @@ const Container: FC<ContainerProps> = (props: ContainerProps) => {
   const service = new SliderService(containerEl, transitions[transition]);
 
   return (
-    <div className="Container" ref={containerRef} {...rest}>
+    <div className='Container' ref={containerRef} {...rest}>
       {Children.map(children, (child, i) => {
         return (
           <div
             data-index={i}
             onTouchStart={service.handleTouchStart}
             onTouchMove={service.handleTouchMove}
-            onTouchEnd={service.handleTouchEnd}
-          >
+            onTouchEnd={service.handleTouchEnd}>
             {child}
           </div>
         );

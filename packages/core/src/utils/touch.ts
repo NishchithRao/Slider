@@ -1,4 +1,4 @@
-import { TransitonFn } from "../slider-service/SliderService";
+import { TransitonFn } from '../slider-service/SliderService';
 
 /**
  * gets the scrolled value of the the current of the element swiped
@@ -6,13 +6,16 @@ import { TransitonFn } from "../slider-service/SliderService";
  * @param index The index of the elment to be shown
  * @returns The total scrolled value
  */
-export const getElPosition = (ref: HTMLDivElement | null, index: number) => {
+export const getElPosition = (
+  ref: HTMLDivElement | null,
+  index: number
+): number => {
   const children = Array.from(
     ref?.children as HTMLCollectionOf<HTMLDivElement>
   );
   let scrolledValue = 0;
 
-  if (children) {
+  if (children.length > 0) {
     children.every((el, i) => {
       if (i < index) {
         scrolledValue += el.offsetWidth;
@@ -38,10 +41,10 @@ export const moveToSlide = (
   index: number,
   touchValue: number = 0,
   resetStyle?: boolean
-) => {
-  if (ref) {
+): void => {
+  if (ref !== null) {
     const children = Array.from(
-      (ref.children as HTMLCollectionOf<HTMLDivElement>) || []
+      (ref.children as HTMLCollectionOf<HTMLDivElement>) ?? []
     );
     const finalIndex =
       index <= 0 ? 0 : index >= children.length ? index - 1 : index;
@@ -56,9 +59,9 @@ export const moveToSlide = (
         child.offsetWidth,
         touchValue
       ).forEach(({ type, value, affectsOtherSlides }) => {
-        if (affectsOtherSlides) {
-          if (!resetStyle) children[index].style[type] = value;
-          child.style[type] = "";
+        if (affectsOtherSlides ?? false) {
+          if (!(resetStyle ?? true)) children[index].style[type] = value;
+          child.style[type] = '';
         } else {
           child.style[type] = value;
         }
@@ -74,4 +77,5 @@ export const moveToSlide = (
  */
 export const getIndexNumber = (
   ev: TouchEvent | React.TouchEvent<HTMLDivElement>
-) => parseInt((ev?.currentTarget as HTMLDivElement)?.dataset.index || "0");
+): number =>
+  parseInt((ev?.currentTarget as HTMLDivElement)?.dataset.index ?? '0');

@@ -1,16 +1,16 @@
-import { TouchEvent as ReactTouchEvent } from "react";
-import { getIndexNumber, moveToSlide } from "../utils/touch";
+import { TouchEvent as ReactTouchEvent } from 'react';
+import { getIndexNumber, moveToSlide } from '../utils/touch';
 
 export type TransitonFn = (
   scrolledValue: number,
   totalWidth: number,
   elWidth: number,
   touchDistance: number
-) => {
+) => Array<{
   type: string;
   value: string;
   affectsOtherSlides?: boolean;
-}[];
+}>;
 
 class SliderService {
   static container: HTMLDivElement | null;
@@ -22,7 +22,9 @@ class SliderService {
     SliderService.transitonFn = transitionFn;
   }
 
-  public handleTouchEnd(ev: TouchEvent | ReactTouchEvent<HTMLDivElement>) {
+  public handleTouchEnd(
+    ev: TouchEvent | ReactTouchEvent<HTMLDivElement>
+  ): void {
     const index = getIndexNumber(ev);
     const touchDistance = SliderService.store - ev.changedTouches[0].clientX;
     const touchDistancePercent =
@@ -49,7 +51,9 @@ class SliderService {
     }
   }
 
-  public handleTouchMove(ev: TouchEvent | React.TouchEvent<HTMLDivElement>) {
+  public handleTouchMove(
+    ev: TouchEvent | React.TouchEvent<HTMLDivElement>
+  ): void {
     const currentTouchValue = ev.changedTouches[0].clientX;
     const index = getIndexNumber(ev);
     const touchDistance = SliderService.store - currentTouchValue;
@@ -61,7 +65,9 @@ class SliderService {
     );
   }
 
-  public handleTouchStart(ev: TouchEvent | React.TouchEvent<HTMLDivElement>) {
+  public handleTouchStart(
+    ev: TouchEvent | React.TouchEvent<HTMLDivElement>
+  ): void {
     SliderService.store = ev.changedTouches[0].clientX;
   }
 }
