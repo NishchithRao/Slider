@@ -49,6 +49,7 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
+    "postinstall": "cd packages/core && npm install && cd ../react && npm install",
     "build": "lerna run build",
     "bootstrap": "lerna bootstrap",
     "build-storybook": "build-storybook",
