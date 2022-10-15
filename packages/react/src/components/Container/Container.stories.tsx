@@ -13,6 +13,7 @@ const Slide = (props: {
   <div
     style={{
       height: "300px",
+      aspectRatio: "1/1",
       color: "white",
       display: "flex",
       alignItems: "center",
@@ -35,6 +36,4 @@ export const basic = (args: ContainerProps) => (
     <Slide color="brown">Slide 5</Slide>
   </Container>
 );
-basic.args = {
-  transition: "default",
-} as ContainerProps;
+basic.args = {} as ContainerProps;
