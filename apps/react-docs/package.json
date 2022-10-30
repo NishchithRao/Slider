@@ -10,18 +10,17 @@
   "module": "dist/index.mjs",
   "typings": "dist/index.d.ts",
   "peerDependencies": {
-    "react": ">=16",
-    "react-dom": ">=16",
     "@slider/core": "*",
-    "@slider/react": "*"
+    "@slider/react": "*",
+    "react": ">=16",
+    "react-dom": ">=16"
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "vite build",
-    "storybook": "start-storybook -p 6006",
-    "postbuild": "sass --no-source-map src/index.scss dist/slider-react.css"
+    "build": "build-storybook --docs",
+    "storybook": "start-storybook -p 6006"
   },
   "dependencies": {
     "@babel/core": "^7.19.1",
@@ -33,5 +32,8 @@
     "@storybook/addon-links": "^6.5.12",
     "@storybook/builder-vite": "^0.2.5",
     "@storybook/preset-scss": "^1.0.3"
+  },
+  "devDependencies": {
+    "@storybook/react": "^6.5.13"
   }
 }

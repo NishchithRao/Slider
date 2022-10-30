@@ -1,5 +1,4 @@
 const { mergeConfig } = require('vite');
-const { htmlImport } = require('./plugins/htmlPlugin');
 
 module.exports = {
   stories: [
@@ -12,12 +11,8 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/preset-scss'
   ],
+  framework: '@storybook/react',
   core: {
     builder: '@storybook/builder-vite'
-  },
-  async viteFinal(config) {
-    return mergeConfig(config, {
-      plugins: [htmlImport()]
-    });
   }
 };
