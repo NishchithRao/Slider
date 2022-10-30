@@ -11,11 +11,10 @@
   "typings": "dist/index.d.ts",
   "peerDependencies": {
     "react": ">=16",
-    "react-dom": ">=16",
-    "@slider/core": "*"
+    "react-dom": ">=16"
   },
-  "devDependencies": {
-    "@slider/core": "file:../core"
+  "dependencies": {
+    "@slider/core": "*"
   },
   "files": [
     "dist"

@@ -1,0 +1,37 @@
+{
+  "name": "@slider/react-docs",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Nishchith.Rao <nischitrao5@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "dist/index.cjs",
+  "source": "src/index.ts",
+  "module": "dist/index.mjs",
+  "typings": "dist/index.d.ts",
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": ">=16",
+    "@slider/core": "*",
+    "@slider/react": "*"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "storybook": "start-storybook -p 6006",
+    "postbuild": "sass --no-source-map src/index.scss dist/slider-react.css"
+  },
+  "dependencies": {
+    "@babel/core": "^7.19.1",
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-interactions": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/builder-vite": "^0.2.5",
+    "@storybook/preset-scss": "^1.0.3"
+  }
+}
