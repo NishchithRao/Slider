@@ -1,0 +1,30 @@
+{
+  "name": "@slider/vanilla",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Nishchith.Rao <nischitrao5@gmail.com>",
+  "homepage": "https://github.com/NishchithRao/Slider#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "source": "src/index.ts",
+  "directories": {
+    "dist": "dist"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NishchithRao/Slider.git"
+  },
+  "scripts": {
+    "build": "vite build"
+  },
+  "bugs": {
+    "url": "https://github.com/NishchithRao/Slider/issues"
+  },
+  "dependencies": {
+    "@slider/core": "*"
+  }
+}

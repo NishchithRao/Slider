@@ -1,0 +1,17 @@
+{
+    "extends": "../../tsconfig",
+    "compilerOptions": {
+        "outDir": "dist",
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "declaration": true,
+        "declarationDir": "dist",
+        "target": "ES5",
+        "baseUrl": ".",
+        "paths": {
+            "@slider/core":["../core/src"]
+        }
+    },
+    "include": ["src"],
+    "exclude": ["node_modules"]
+}
