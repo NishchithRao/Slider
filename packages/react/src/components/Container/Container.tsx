@@ -1,6 +1,6 @@
 import { Children, FC, HTMLAttributes, useCallback, useState } from 'react';
 import './Container.scss';
-import { SliderService, transitions } from '@slider/core';
+import { SliderService, transitions } from '@slider/core/src';
 
 export interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
   /**

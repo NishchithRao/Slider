@@ -1,0 +1,11 @@
+.slide {
+    height: 300px;
+    aspect-ratio: 1/1;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: red;
+    margin-inline: 2px;
+    font-size: 34px
+}
