@@ -21,7 +21,7 @@ const sharedConfig = (pkgJSON) => ({
     },
     emptyOutDir: true,
     outDir: 'dist',
-    minify: 'terser'
+    minify: 'esbuild'
   }
 });
 
